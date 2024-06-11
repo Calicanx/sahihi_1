@@ -1,0 +1,1000 @@
+2024-06-11 09:23:10 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. in /home/kali/basic/vendor/yiisoft/yii2/captcha/Captcha.php:175
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/captcha/Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 /home/kali/basic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 /home/kali/basic/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#4 /home/kali/basic/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#5 /home/kali/basic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#6 /home/kali/basic/vendor/yiisoft/yii2/base/Widget.php(143): yii\BaseYii::createObject()
+#7 /home/kali/basic/vendor/yiisoft/yii2/widgets/ActiveField.php(795): yii\base\Widget::widget()
+#8 /home/kali/basic/views/site/contact.php(54): yii\widgets\ActiveField->widget()
+#9 /home/kali/basic/vendor/yiisoft/yii2/base/View.php(348): require('...')
+#10 /home/kali/basic/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile()
+#11 /home/kali/basic/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile()
+#12 /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render()
+#13 /home/kali/basic/controllers/SiteController.php(114): yii\base\Controller->render()
+#14 [internal function]: app\controllers\SiteController->actionContact()
+#15 /home/kali/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#16 /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#17 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#18 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#19 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#20 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2024-06-11 09:23:10 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56700'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fcontact'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718097790.8229
+    'REQUEST_TIME' => 1718097790
+]
+2024-06-11 11:01:12 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add-lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:01:12 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add-lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53666'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd-lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd-lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103672.9953
+    'REQUEST_TIME' => 1718103672
+]
+2024-06-11 11:01:39 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add-lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:01:39 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add-lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '41454'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd-lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd-lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103698.9999
+    'REQUEST_TIME' => 1718103698
+]
+2024-06-11 11:03:19 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add-lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:03:19 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add-lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '58588'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd-lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd-lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103799.0472
+    'REQUEST_TIME' => 1718103799
+]
+2024-06-11 11:03:28 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add-lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:03:28 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add-lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '43656'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd-lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd-lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103808.5618
+    'REQUEST_TIME' => 1718103808
+]
+2024-06-11 11:04:57 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add-lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:04:57 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add-lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '47546'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd-lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd-lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103897.7484
+    'REQUEST_TIME' => 1718103897
+]
+2024-06-11 11:05:00 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add-lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:05:00 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add-lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '47588'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd-lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd-lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103900.0203
+    'REQUEST_TIME' => 1718103900
+]
+2024-06-11 11:05:04 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add_lead in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:05:04 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add_lead'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '58200'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd_lead'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd_lead'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718103904.3291
+    'REQUEST_TIME' => 1718103904
+]
+2024-06-11 11:35:44 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. in /home/kali/basic/vendor/yiisoft/yii2/captcha/Captcha.php:175
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/captcha/Captcha.php(94): yii\captcha\Captcha::checkRequirements()
+#1 /home/kali/basic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\captcha\Captcha->init()
+#2 [internal function]: yii\base\BaseObject->__construct()
+#3 /home/kali/basic/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#4 /home/kali/basic/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#5 /home/kali/basic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#6 /home/kali/basic/vendor/yiisoft/yii2/base/Widget.php(143): yii\BaseYii::createObject()
+#7 /home/kali/basic/vendor/yiisoft/yii2/widgets/ActiveField.php(795): yii\base\Widget::widget()
+#8 /home/kali/basic/views/site/contact.php(54): yii\widgets\ActiveField->widget()
+#9 /home/kali/basic/vendor/yiisoft/yii2/base/View.php(348): require('...')
+#10 /home/kali/basic/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile()
+#11 /home/kali/basic/vendor/yiisoft/yii2/base/View.php(157): yii\base\View->renderFile()
+#12 /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php(407): yii\base\View->render()
+#13 /home/kali/basic/controllers/SiteController.php(115): yii\base\Controller->render()
+#14 [internal function]: app\controllers\SiteController->actionContact()
+#15 /home/kali/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#16 /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#17 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#18 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#19 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#20 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2024-06-11 11:35:44 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '46694'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fcontact'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Fabout'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718105744.3286
+    'REQUEST_TIME' => 1718105744
+]
+2024-06-11 11:35:51 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:35:51 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49818'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718105751.2486
+    'REQUEST_TIME' => 1718105751
+]
+2024-06-11 11:50:57 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:50:57 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '46826'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718106657.9631
+    'REQUEST_TIME' => 1718106657
+]
+2024-06-11 11:51:17 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:51:17 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52796'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718106677.9172
+    'REQUEST_TIME' => 1718106677
+]
+2024-06-11 11:52:54 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:52:54 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59306'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718106774.6094
+    'REQUEST_TIME' => 1718106774
+]
+2024-06-11 11:52:58 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/adde in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:52:58 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/adde'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59376'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadde'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadde'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718106778.0565
+    'REQUEST_TIME' => 1718106778
+]
+2024-06-11 11:53:00 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/added in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:53:00 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/added'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59452'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadded'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadded'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718106780.1991
+    'REQUEST_TIME' => 1718106780
+]
+2024-06-11 11:53:03 [::1][-][g5l58d8v222smb6t8gc3f6ckef][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/add in /home/kali/basic/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#1 /home/kali/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#2 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#3 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/kali/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/kali/basic/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#1 /home/kali/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2024-06-11 11:53:03 [::1][-][g5l58d8v222smb6t8gc3f6ckef][info][application] $_GET = [
+    'r' => 'site/add'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'g5l58d8v222smb6t8gc3f6ckef'
+    '_csrf' => '172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/kali/basic/web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '58898'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Fadd'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/kali/basic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Fadd'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=g5l58d8v222smb6t8gc3f6ckef; _csrf=172c4a4315c393e72aa65eee73438e3b6c3fbbe6e233fcc28d00022b9e1a9001a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Bn8WJzrRcI233Bk5fcqHsC0XhFx10QqZ%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_DNT' => '1'
+    'HTTP_SEC_GPC' => '1'
+    'REQUEST_TIME_FLOAT' => 1718106783.2031
+    'REQUEST_TIME' => 1718106783
+]
