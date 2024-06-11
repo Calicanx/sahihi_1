@@ -3,9 +3,9 @@
 namespace app\models;
 
 use Yii;
-use yii\base\Model;
+use yii\base\ActiveRecord;
 
-class Lead extends Model
+class Lead extends ActiveRecord
 {
     public $name;
     public $email;
