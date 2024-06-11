@@ -9,7 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Lead;
+use app\models\Leads;
 
 class SiteController extends Controller
 {
@@ -134,12 +134,14 @@ class SiteController extends Controller
      */
     public function actionLead()
     {
-        $model = new Lead();
+        $model = new Leads();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             // valid data received in $model
 
-            // do something meaningful here about $model ...
+                // do something meaningful here about $model ...
+                $model->save();
+                $model->save();
 
             return $this->render('added', ['model' => $model]);
         } else {
