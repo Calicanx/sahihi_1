@@ -132,7 +132,7 @@ class SiteController extends Controller
      *
      * $return Response|string
      */
-    public function addLead()
+    public function actionLead()
     {
         $model = new Lead();
 
