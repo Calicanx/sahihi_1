@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property string|null $name
  * @property string|null $email
+ * @property int|null $customer
  */
 class Leads extends \yii\db\ActiveRecord
 {
@@ -27,6 +28,7 @@ class Leads extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['customer'], 'integer'],
             [['name', 'email'], 'string', 'max' => 100],
             [['email'], 'unique'],
         ];
@@ -41,7 +43,7 @@ class Leads extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'email' => 'Email',
+            'customer' => 'Customer',
         ];
     }
 }
-
