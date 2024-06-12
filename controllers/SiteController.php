@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Leads;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
+use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -38,37 +39,112 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Leads::find(),
-            /*
-            'pagination' => [
-                'pageSize' => 50
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC,
-                ]
-            ],
-            */
+        $query = Leads::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
         ]);
 
+        $leads = $query->where(['customer' => 0])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();    
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
+            'leads' => $leads,
+        ]);
+    }
+
+        /**
+     * View only customers.
+     *
+     * @return string
+     */
+    public function actionViewcustomers()
+    {
+        $query = Leads::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $leads = $query->where(['customer' => 1])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('customers', [
+            'leads' => $leads,
+        ]);
+    }
+
+            /**
+     * View only leads.
+     *
+     * @return string
+     */
+    public function actionViewleads()
+    {
+        $query = Leads::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $leads = $query->where(['customer' => 0])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('leads', [
+            'leads' => $leads,
         ]);
     }
 
     /**
      * Displays a single Leads model.
-     * @param int $id ID
+     * @param varchar $email
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionSearch($email)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
+        $query = Leads::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $leads = $query->where(['email' => $email])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('index', [
+            'leads' => $leads,
         ]);
     }
+
+     /**
+     * Send Email.
+     */
+    public function actionMail($email)
+    {
+        // Create email message
+        $message = Yii::$app->mailer->compose();
+        $message->setFrom(['your_email@example.com' => 'Your Name']);
+        $message->setTo($email);
+        $message->setSubject('Subject of the Email');
+        $message->setHtmlBody('<p>This is the body of the email.</p>');
+
+        // Send email
+        if ($message->send()) {
+        echo 'Email sent successfully.';
+        } else {
+        echo 'Error sending email.';
+        }
+    }
+
 
         /**
      * Displays a all Leads model.
@@ -79,6 +155,9 @@ class SiteController extends Controller
         return $this ->render('viewall', ['leads'=>$leads]);
     }
 
+        /**
+     * Displays a all Leads model.
+     */
 
     /**
      * Creates a new Leads model.
@@ -121,6 +200,27 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+        /**
+     * Updates an existing Leads to customer.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param int $id ID
+     * @return string|\yii\web\Response
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionEdit($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+            return $this->redirect(['index', 'id' => $model->id]);
+        }
+
+        return $this->render('edit', [
+            'model' => $model,
+        ]);
+    }
+
 
     /**
      * Deletes an existing Leads model.
