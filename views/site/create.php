@@ -11,9 +11,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+         <?= $form->field($model, 'customer')->dropDownList([
+            '1' => 'Customer',
+            '0' => 'Lead',
+        ]) ?>
         <?= $form->field($model, 'name') ?>
         <?= $form->field($model, 'email') ?>
-
+    
         <div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
         </div>
