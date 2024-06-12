@@ -3,18 +3,45 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
-class Leads extends ActiveRecord
+/**
+ * This is the model class for table "leads".
+ *
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $email
+ */
+class Leads extends \yii\db\ActiveRecord
 {
-    public $name;
-    public $email;
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'leads';
+    }
 
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
-            [['name', 'email'], 'required'],
-            ['email', 'email'],
+            [['name', 'email'], 'string', 'max' => 100],
+            [['email'], 'unique'],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'name' => 'Name',
+            'email' => 'Email',
         ];
     }
 }
+
