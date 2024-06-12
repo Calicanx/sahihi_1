@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\LinkPager;
@@ -24,9 +23,9 @@ use yii\widgets\LinkPager;
                     <li class="nav-item">
                         <?= Html::a('View Customer Records', ['site/viewcustomers'], ['class' => 'text-dark']) ?>
                     </li>
-                     <li class="nav-item">
-                         <?= Html::a('Add Customer/Lead Record', ['site/create'], ['class' => 'text-dark']) ?>
-                     </li>
+                    <li class="nav-item">
+                        <?= Html::a('Add Customer/Lead Record', ['site/create'], ['class' => 'text-dark']) ?>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -34,6 +33,17 @@ use yii\widgets\LinkPager;
         <!-- Main Content -->
         <div class="col-md-9 ml-sm-auto col-lg-9 px-4">
             <h2 class="mt-3">Customer/Lead Records</h2>
+
+            <!-- Search Form -->
+            <div class="input-group mb-3">
+                <?= Html::beginForm(['search'], 'get', ['class' => 'form-inline']) ?>
+                <?= Html::textInput('email', Yii::$app->request->get('email'), ['class' => 'form-control', 'placeholder' => 'Search by email']) ?>
+                <div class="">
+                    <?= Html::submitButton('Search',['class' => 'text-light btn btn-primary btn-outline-secondary']) ?>
+                </div>
+                <?= Html::endForm() ?>
+            </div>
+
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
@@ -46,23 +56,20 @@ use yii\widgets\LinkPager;
                         </tr>
                     </thead>
                     <tbody>
-        <?php foreach ($leads as $lead): ?>
-            <tr>
-                <td><?= Html::encode("{$lead->id}") ?></td>
-                <td><?= Html::encode("{$lead->name}") ?></td>
-                <td><?= Html::encode("{$lead->email}") ?></td>
-                <td><?= $lead->customer == 1 ? 'Customer' : 'Lead' ?></td>
-                 <td>
-                    <?= Html::a('Edit', ['update', 'id' => $lead->id], ['class' => 'btn btn-primary']) ?>
-                    <?= Html::a('Update', ['edit', 'id' => $lead->id], ['class' => 'btn btn-success']) ?>
-                    <?= Html::a('Mail', ['lead/mail', 'id' => $lead->id], ['class' => 'btn btn-info']) ?>
-                    <?= Html::a('Delete', ['delete', 'id' => $lead->id], ['class' => 'btn btn-danger', 'data-confirm' => 'Are you sure you want to delete this item?', 'data-method' => 'post']) ?>
-                </td>
-
-                <!-- Add more table cells as needed -->
-            </tr>
-        <?php endforeach; ?>
-                        <!-- Table rows for customer/lead records here -->
+                        <?php foreach ($leads as $lead): ?>
+                            <tr>
+                                <td><?= Html::encode($lead->id) ?></td>
+                                <td><?= Html::encode($lead->name) ?></td>
+                                <td><?= Html::encode($lead->email) ?></td>
+                                <td><?= $lead->customer == 1 ? 'Customer' : 'Lead' ?></td>
+                                <td>
+                                    <?= Html::a('Edit', ['update', 'id' => $lead->id], ['class' => 'btn btn-primary']) ?>
+                                    <?= Html::a('Update', ['edit', 'id' => $lead->id], ['class' => 'btn btn-success']) ?>
+                                    <?= Html::a('Mail', ['mail', 'email' => $lead->email], ['class' => 'btn btn-info']) ?>
+                                    <?= Html::a('Delete', ['delete', 'id' => $lead->id], ['class' => 'btn btn-danger', 'data-confirm' => 'Are you sure you want to delete this item?', 'data-method' => 'post']) ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
