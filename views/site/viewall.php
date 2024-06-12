@@ -9,6 +9,7 @@ use yii\widgets\LinkPager;
             <th>Lead ID</th>
             <th>Lead Name</th>
             <th>Lead Email</th>
+            <th>Customer</th>
             <!-- Add more table headers as needed -->
         </tr>
     </thead>
@@ -18,6 +19,7 @@ use yii\widgets\LinkPager;
                 <td><?= Html::encode("{$lead->id}") ?></td>
                 <td><?= Html::encode("{$lead->name}") ?></td>
                 <td><?= Html::encode("{$lead->email}") ?></td>
+                <td><?= $lead->customer == 1 ? 'Customer' : 'Lead' ?></td>
                 <!-- Add more table cells as needed -->
             </tr>
         <?php endforeach; ?>
